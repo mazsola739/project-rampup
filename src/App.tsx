@@ -1,3 +1,10 @@
+import { CardList } from './components';
+
 export const App = () => {
-	return <div>learn react</div>;
+	return (
+		<div>
+			<div>learn react</div>
+			<CardList />
+		</div>
+	);
 };
