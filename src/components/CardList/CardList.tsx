@@ -12,7 +12,11 @@ export const CardList = () => {
 	return (
 		<div>
 			{data.map((image) => (
-				<Card title={image.title} thumbnailUrl={image.thumbnailUrl} />
+				<Card
+					key={image.id}
+					title={image.title}
+					thumbnailUrl={image.thumbnailUrl}
+				/>
 			))}
 		</div>
 	);
