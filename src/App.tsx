@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Layout } from './layouts';
-import { Albums, Comments, Photos, Posts, Users } from './pages';
+import { Albums, Comments, Photos, Posts, Todos, Users } from './pages';
 
 export const App = () => {
 	return (
@@ -12,7 +12,7 @@ export const App = () => {
 					<Route path='/comments' element={<Comments />} />
 					<Route path='/photos' element={<Photos />} />
 					<Route path='/posts' element={<Posts />} />
-					<Route path='/todos' element={<Users />} />
+					<Route path='/todos' element={<Todos />} />
 					<Route path='/users' element={<Users />} />
 				</Route>
 			</Routes>
