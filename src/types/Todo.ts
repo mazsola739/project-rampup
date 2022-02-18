@@ -1,4 +1,4 @@
-export type TodoProps = {
+export type TodoProp = {
 	userId: number;
 	id: number;
 	title: string;

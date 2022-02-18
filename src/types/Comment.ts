@@ -1,4 +1,4 @@
-export type CommentProps = {
+export type CommentProp = {
 	postId: number;
 	id: number;
 	name: string;

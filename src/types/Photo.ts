@@ -1,4 +1,4 @@
-export type PhotoProps = {
+export type PhotoProp = {
 	albumId: number;
 	id: number;
 	title: string;

@@ -1,4 +1,5 @@
+import { PhotoProp } from 'src/types';
+
 export type PhotoProps = {
-	thumbnailUrl: string;
-	title: string;
+	photo: PhotoProp;
 };

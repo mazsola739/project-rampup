@@ -12,11 +12,7 @@ export const Photos = () => {
 	return (
 		<div>
 			{data.map((photo) => (
-				<Photo
-					key={photo.id}
-					title={photo.title}
-					thumbnailUrl={photo.thumbnailUrl}
-				/>
+				<Photo key={photo.id} photo={photo} />
 			))}
 		</div>
 	);
