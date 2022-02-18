@@ -1,10 +1,10 @@
-import { CardList } from './components';
+import { Photos } from './pages';
 
 export const App = () => {
 	return (
 		<div>
 			<div>learn react</div>
-			<CardList />
+			<Photos />
 		</div>
 	);
 };
