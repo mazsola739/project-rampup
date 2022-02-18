@@ -6,7 +6,7 @@ export const App = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path='/' element={<Navigate replace to='/posts' />} />
+				<Route path='/' element={<Navigate replace to='/albums' />} />
 				<Route path='/' element={<Layout />}>
 					<Route path='/albums' element={<Albums />} />
 					<Route path='/comments' element={<Comments />} />

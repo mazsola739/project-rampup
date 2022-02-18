@@ -8,7 +8,7 @@ export const Albums = () => {
 	if (isLoading) return <p>Loading</p>;
 
 	if (!data) return null;
-
+	console.log(data);
 	return (
 		<main>
 			{data.map((album) => (
