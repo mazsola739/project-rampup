@@ -1,8 +1,12 @@
-import { UserProp } from '../types';
+import { UserProp } from 'src/types';
+import { instance } from '.';
 
 export const getUsers = async () => {
-	const response = await fetch('https://jsonplaceholder.typicode.com/users');
-	const data: UserProp[] = await response.json();
+	const userApi = instance();
+
+	const response = await userApi('users');
+
+	const data: UserProp[] = response.data;
 
 	return data;
 };

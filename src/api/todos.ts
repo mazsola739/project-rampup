@@ -1,8 +1,12 @@
-import { TodoProp } from '../types';
+import { TodoProp } from 'src/types';
+import { instance } from '.';
 
 export const getTodos = async () => {
-	const response = await fetch('https://jsonplaceholder.typicode.com/todos');
-	const data: TodoProp[] = await response.json();
+	const todoApi = instance();
+
+	const response = await todoApi('todos');
+
+	const data: TodoProp[] = response.data;
 
 	return data;
 };

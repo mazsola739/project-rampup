@@ -1,10 +1,11 @@
-import { apiService } from '.';
-import { AlbumProp } from '../types';
+import { AlbumProp } from 'src/types';
+import { instance } from '.';
 
 export const getAlbums = async () => {
-	const albumApi = apiService();
+	const albumApi = instance();
 
 	const response = await albumApi.get('albums');
+
 	const data: AlbumProp[] = response.data;
 
 	return data;

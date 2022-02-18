@@ -1,8 +1,12 @@
-import { PostProp } from '../types';
+import { PostProp } from 'src/types';
+import { instance } from '.';
 
 export const getPosts = async () => {
-	const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-	const data: PostProp[] = await response.json();
+	const postApi = instance();
+
+	const response = await postApi('posts');
+
+	const data: PostProp[] = response.data;
 
 	return data;
 };

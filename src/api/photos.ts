@@ -1,8 +1,12 @@
-import { PhotoProp } from '../types';
+import { PhotoProp } from 'src/types';
+import { instance } from '.';
 
 export const getPhotos = async () => {
-	const response = await fetch('https://jsonplaceholder.typicode.com/photos');
-	const data: PhotoProp[] = await response.json();
+	const photoApi = instance();
+
+	const response = await photoApi('photos');
+
+	const data: PhotoProp[] = response.data;
 
 	return data;
 };

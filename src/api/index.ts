@@ -1,4 +1,4 @@
-export * from './apiService';
+export * from './instance';
 
 export * from './albums';
 export * from './comments';

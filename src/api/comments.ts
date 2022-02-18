@@ -1,8 +1,12 @@
-import { CommentProp } from '../types';
+import { CommentProp } from 'src/types';
+import { instance } from '.';
 
 export const getComments = async () => {
-	const response = await fetch('https://jsonplaceholder.typicode.com/comments');
-	const data: CommentProp[] = await response.json();
+	const commentApi = instance();
+
+	const response = await commentApi('comments');
+
+	const data: CommentProp[] = response.data;
 
 	return data;
 };
