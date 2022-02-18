@@ -1,5 +1,6 @@
 import { useQuery } from 'react-query';
 import { getPhotos } from 'src/api';
+import { Photo } from 'src/components';
 
 export const Photos = () => {
 	const { isLoading, data } = useQuery('photos', getPhotos);
