@@ -10,10 +10,11 @@ export const Photos = () => {
 	if (!data) return null;
 
 	return (
-		<div>
+		<section className='photos-section'>
+			<h1>Posts</h1>
 			{data.map((photo) => (
 				<Photo key={photo.id} photo={photo} />
 			))}
-		</div>
+		</section>
 	);
 };

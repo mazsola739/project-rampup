@@ -2,6 +2,8 @@ import { useQuery } from 'react-query';
 import { getComments } from 'src/api';
 import { Comment } from 'src/components';
 
+import './Comments.scss';
+
 export const Comments = () => {
 	const { isLoading, data } = useQuery('comments', getComments);
 
@@ -10,10 +12,11 @@ export const Comments = () => {
 	if (!data) return null;
 
 	return (
-		<main>
+		<section className='comments-section'>
+			<h1>Comments</h1>
 			{data.map((comment) => (
 				<Comment key={comment.id} comment={comment} />
 			))}
-		</main>
+		</section>
 	);
 };

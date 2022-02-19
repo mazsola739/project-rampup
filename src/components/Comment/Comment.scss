@@ -1,0 +1,13 @@
+.comment-article {
+  padding: 10px;
+  border: 1px solid var(--black-panther);
+  border-radius: 5px;
+}
+
+.comment-article:nth-child(odd) {
+  background: var(--baby-seal);
+}
+
+.comment-article:nth-child(even) {
+    background: var(--dust-to-dust);
+}

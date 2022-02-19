@@ -1,4 +1,13 @@
-section {
-    height: 100px;
-    background-color: var(--dust-to-dust);
+.post-article {
+  padding: 10px;
+  border: 1px solid var(--black-panther);
+  border-radius: 5px
+}
+
+.post-article:nth-child(even) {
+  background: var(--baby-seal);
+}
+
+.post-article:nth-child(odd) {
+  background: var(--dust-to-dust);
 }

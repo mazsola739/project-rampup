@@ -6,9 +6,9 @@ export const Post = ({ post }: PostProps) => {
 	const { body, title } = post;
 
 	return (
-		<section>
+		<article className='post-article'>
 			<h1>{title}</h1>
 			<p>{body}</p>
-		</section>
+		</article>
 	);
 };

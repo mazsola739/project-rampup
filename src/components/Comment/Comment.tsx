@@ -1,7 +1,9 @@
 import { CommentProps } from './Comment.types';
 
+import './Comment.scss';
+
 export const Comment = ({ comment }: CommentProps) => {
 	const { body } = comment;
 
-	return <section>{body}</section>;
+	return <article className='comment-article'>{body}</article>;
 };

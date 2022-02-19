@@ -10,10 +10,10 @@ export const Albums = () => {
 	if (!data) return null;
 
 	return (
-		<main>
+		<section className='albums-section'>
 			{data.map((album) => (
 				<Album key={album.id} album={album} />
 			))}
-		</main>
+		</section>
 	);
 };

@@ -1,0 +1,13 @@
+.todo-article {
+  padding: 10px;
+  border: 1px solid var(--black-panther);
+  border-radius: 5px;
+}
+
+.todo-article:nth-child(odd) {
+  background: var(--baby-seal);
+}
+
+.todo-article:nth-child(even) {
+  background: var(--dust-to-dust);
+}
