@@ -1,7 +1,14 @@
 import { PostProps } from './Post.types';
 
-export const Post = ({ post }: PostProps) => {
-	const { body } = post;
+import './Post.scss';
 
-	return <p>{body}</p>;
+export const Post = ({ post }: PostProps) => {
+	const { body, title } = post;
+
+	return (
+		<section>
+			<h1>{title}</h1>
+			<p>{body}</p>
+		</section>
+	);
 };

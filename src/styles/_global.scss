@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  margin: auto;
+  padding: 0;
+  color: var(--eirie-black);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  max-width: 1200px;
+  background-color: var(--black-panther);
+  box-sizing: border-box;
+  height: 100vh;
+  min-height: 100%;
+
+}
+
+#root {
+  height: 100%;
+}

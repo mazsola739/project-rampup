@@ -3,5 +3,9 @@ import { TodoProps } from './Todo.types';
 export const Todo = ({ todo }: TodoProps) => {
 	const { title } = todo;
 
-	return <p>{title}</p>;
+	return (
+		<section>
+			<h1>{title}</h1>
+		</section>
+	);
 };
