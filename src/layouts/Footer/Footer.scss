@@ -1,5 +1,11 @@
 footer {
   background-color: var(--steel);
+}
 
-  height: 50px;
+footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 50px;
 }

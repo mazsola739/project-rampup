@@ -4,9 +4,9 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 
-  height: 200px;
+  min-height: 200px;
 }
 
-.header-heading {
+header h1 {
   padding: 10px;
 }

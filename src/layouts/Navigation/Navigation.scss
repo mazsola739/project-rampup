@@ -1,14 +1,15 @@
 nav {
   background-color: var(--steel);
-  
-  height: 50px;
 }
 
-.navbar {
+nav ul {
+  display: flex;
+  justify-content: left;
+  align-items: center;
   padding: 10px;
+  min-height: 50px;
 }
 
 li {
   display: inline;
- 
 }
