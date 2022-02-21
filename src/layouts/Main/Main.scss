@@ -1,8 +1,9 @@
 main {
-  width: 100%;
-  background-color: var(--steel);
   display: grid;
   grid-template-columns: 75% auto;
   gap: 0.5rem;
-  background-color: var(--silver-lake);
+
+  background-color: var(--steel);
+  
+  width: 100%;
 }

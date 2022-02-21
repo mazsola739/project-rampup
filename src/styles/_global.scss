@@ -1,17 +1,21 @@
+* {
+  border-radius: 5px;
+}
+
 html {
-  width: 1200px;
-  max-height:60vh;
   margin: auto;
+  width: 1200px;
 }
 
 body {
-  padding: 0;
-  margin:0;
-  color: var(--eirie-black);
-  font-family: var(--font-primary);
-  font-size: 1rem;
-  max-width: 1200px;
-  max-height:60vh;
   background-color: var(--black-panther);
+
+  margin:0;
+  max-width: 1200px;
+  padding: 0;
+
+  font-size: 1rem;
+  font-family: var(--font-primary);
+  color: var(--eirie-black);
 }
 

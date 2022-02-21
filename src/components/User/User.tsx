@@ -1,6 +1,7 @@
 import { UserProps } from './User.types';
 
 import './User.scss';
+import { Button } from '..';
 
 export const User = ({ user }: UserProps) => {
 	const { username, name, email, phone, website } = user;
@@ -30,6 +31,7 @@ export const User = ({ user }: UserProps) => {
 					</tr>
 				</tbody>
 			</table>
+			<Button>More info</Button>
 		</article>
 	);
 };
