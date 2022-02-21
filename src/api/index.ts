@@ -1,6 +1,8 @@
-export * from './albumApi';
-export * from './commentApi';
-export * from './photoApi';
-export * from './postApi';
-export * from './todoApi';
-export * from './userApi';
+export * from './instance';
+
+export * from './albums';
+export * from './comments';
+export * from './photos';
+export * from './posts';
+export * from './todos';
+export * from './users';

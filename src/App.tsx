@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { MainLayout } from './layouts';
-import { Albums, Users } from './pages';
-import { Posts } from './pages/Posts';
+import { Albums, Posts, Users } from './pages';
 
 export const App = () => {
 	return (
