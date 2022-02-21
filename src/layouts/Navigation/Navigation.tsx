@@ -1,12 +1,18 @@
-import './Navigation.scss';
+import { Link } from 'react-router-dom';
 
 export const Navigation = () => {
 	return (
 		<nav>
 			<ul>
-				<li>Albums | </li>
-				<li>Posts | </li>
-				<li>Users</li>
+				<li>
+					<Link to={'/albums'}>Albums</Link>
+				</li>
+				<li>
+					<Link to={'/posts'}>Posts</Link>
+				</li>
+				<li>
+					<Link to={'/users'}>Users</Link>
+				</li>
 			</ul>
 		</nav>
 	);
