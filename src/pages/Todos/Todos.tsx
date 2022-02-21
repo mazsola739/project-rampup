@@ -13,7 +13,7 @@ export const Todos = () => {
 
 	return (
 		<section className='todos-section'>
-			<h1>Todos</h1>
+			<h2>Todos</h2>
 			{data.map((todo) => (
 				<Todo key={todo.id} todo={todo} />
 			))}

@@ -11,7 +11,7 @@ export const Albums = () => {
 
 	return (
 		<section className='albums-section'>
-			<h1>Albums</h1>
+			<h2>Albums</h2>
 			{data.map((album) => (
 				<Album key={album.id} album={album} />
 			))}

@@ -7,7 +7,7 @@ export const Todo = ({ todo }: TodoProps) => {
 
 	return (
 		<article className='todo-article'>
-			<h1>{title}</h1>
+			<p>{title}</p>
 		</article>
 	);
 };

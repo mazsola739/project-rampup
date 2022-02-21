@@ -11,7 +11,7 @@ export const Photos = () => {
 
 	return (
 		<section className='photos-section'>
-			<h1>Posts</h1>
+			<h2>Posts</h2>
 			{data.map((photo) => (
 				<Photo key={photo.id} photo={photo} />
 			))}

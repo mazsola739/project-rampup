@@ -1,5 +1,9 @@
 import './Header.scss';
 
 export const Header = () => {
-	return <header>Awesome site</header>;
+	return (
+		<header>
+			<h1 className='header-heading'>Awesome site</h1>
+		</header>
+	);
 };

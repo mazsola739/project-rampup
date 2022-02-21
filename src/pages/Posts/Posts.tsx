@@ -13,10 +13,12 @@ export const Posts = () => {
 
 	return (
 		<section className='posts-section'>
-			<h1>Photos</h1>
-			{data.map((post) => (
-				<Post key={post.id} post={post} />
-			))}
+			<h2>Posts</h2>
+			<div className='posts-grid'>
+				{data.map((post) => (
+					<Post key={post.id} post={post} />
+				))}
+			</div>
 		</section>
 	);
 };

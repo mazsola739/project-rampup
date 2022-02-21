@@ -7,7 +7,7 @@ export const Photo = ({ photo }: PhotoProps) => {
 
 	return (
 		<article className='photo-article'>
-			<h1>{title}</h1>
+			<h2>{title}</h2>
 			<img src={thumbnailUrl} alt={title} />
 		</article>
 	);

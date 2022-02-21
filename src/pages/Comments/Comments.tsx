@@ -13,7 +13,7 @@ export const Comments = () => {
 
 	return (
 		<section className='comments-section'>
-			<h1>Comments</h1>
+			<h2>Comments</h2>
 			{data.map((comment) => (
 				<Comment key={comment.id} comment={comment} />
 			))}

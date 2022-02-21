@@ -19,3 +19,20 @@ body {
   color: var(--eirie-black);
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--silver-lake);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--steel);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--black-panther);
+}

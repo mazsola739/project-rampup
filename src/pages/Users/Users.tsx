@@ -13,7 +13,7 @@ export const Users = () => {
 
 	return (
 		<section className='users-section'>
-			<h1>Users</h1>
+			<h2>Users</h2>
 			<div className='users-grid'>
 				{data.map((user) => (
 					<User key={user.id} user={user} />

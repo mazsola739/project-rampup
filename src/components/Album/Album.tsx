@@ -6,7 +6,7 @@ export const Album = ({ album }: AlbumProps) => {
 
 	return (
 		<article>
-			<h1>{title}</h1>
+			<h2>{title}</h2>
 			<p>created by: username</p>
 			<Button>More info</Button>
 		</article>
