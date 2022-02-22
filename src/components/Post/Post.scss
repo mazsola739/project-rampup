@@ -1,12 +1,7 @@
 .post-article {
-  border: 1px solid var(--black-panther);
+  position: relative;
+
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+  border: 0.5px solid var(--steel);
   padding: 10px;
-}
-
-.post-article:nth-child(even) {
-  background: var(--baby-seal);
-}
-
-.post-article:nth-child(odd) {
-  background: var(--dust-to-dust);
 }

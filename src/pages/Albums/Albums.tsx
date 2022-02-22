@@ -2,6 +2,8 @@ import { useQuery } from 'react-query';
 import { getAlbums } from 'src/api';
 import { Album } from 'src/components';
 
+import './Albums.scss';
+
 export const Albums = () => {
 	const { isLoading, data } = useQuery('albums', getAlbums);
 
@@ -12,9 +14,11 @@ export const Albums = () => {
 	return (
 		<section className='albums-section'>
 			<h2>Albums</h2>
-			{data.map((album) => (
-				<Album key={album.id} album={album} />
-			))}
+			<div className='albums-grid'>
+				{data.map((album) => (
+					<Album key={album.id} album={album} />
+				))}
+			</div>
 		</section>
 	);
 };

@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  background-color: var(--black-panther);
+  background: var(--dust-to-dust);
 
   margin:0;
   max-width: 1200px;
@@ -24,12 +24,15 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--silver-lake);
+  background: var(--steel);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--steel);
+  background: var(--silver-lake);
+
+  border: 1px solid var(--eirie-black);
+
   border-radius: 20px;
 }
 

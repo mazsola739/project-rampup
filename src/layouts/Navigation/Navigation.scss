@@ -1,15 +1,17 @@
 nav {
-  background-color: var(--steel);
+  background: var(--steel);
 }
 
 nav ul {
   display: flex;
+  gap: 10px;
   justify-content: left;
   align-items: center;
-  padding: 10px;
+
   min-height: 50px;
+  padding: 10px;
 }
 
-li {
+nav ul li{
   display: inline;
 }

@@ -1,4 +1,5 @@
 export * from './Album';
+export * from './Avatar';
 export * from './Button';
 export * from './Comment';
 export * from './Photo';

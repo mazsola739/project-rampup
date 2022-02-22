@@ -10,3 +10,13 @@ export const getAlbums = async () => {
 
 	return data;
 };
+
+export const getAlbumsById = async (id: string) => {
+	const postApi = instance();
+
+	const response = await postApi(`users/${id}/albums`);
+
+	const data: AlbumProp = response.data;
+
+	return data;
+};

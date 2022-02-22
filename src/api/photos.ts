@@ -10,3 +10,13 @@ export const getPhotos = async () => {
 
 	return data;
 };
+
+export const getPhotosById = async (id: string) => {
+	const commentApi = instance();
+
+	const response = await commentApi(`albums/${id}/photos`);
+
+	const data: PhotoProp = response.data;
+
+	return data;
+};

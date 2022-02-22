@@ -1,14 +1,16 @@
 import { Button } from '..';
 import { AlbumProps } from './Album.types';
 
+import './Album.scss';
+
 export const Album = ({ album }: AlbumProps) => {
 	const { title } = album;
 
 	return (
-		<article>
-			<h2>{title}</h2>
+		<article className='album-article'>
+			<h4>{title}</h4>
 			<p>created by: username</p>
-			<Button>More info</Button>
+			<Button>Click</Button>
 		</article>
 	);
 };

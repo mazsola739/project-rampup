@@ -5,15 +5,21 @@
 
   overflow-y: scroll;
 
-  background-color: var(--silver-lake);
-
   height: 100%;
   padding: 10px;
 }
 
 .posts-grid {
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-rows: repeat(auto-fit, 200px);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
+}
+
+.posts-article {
+  position: relative;
+
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+  border: 0.5px solid var(--steel);
+  height: 180px;
+  padding: 10px;
 }

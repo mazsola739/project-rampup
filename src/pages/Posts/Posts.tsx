@@ -1,6 +1,7 @@
 import { useQuery } from 'react-query';
+import { Link } from 'react-router-dom';
 import { getPosts } from 'src/api';
-import { Post } from 'src/components';
+import { Button } from 'src/components';
 
 import './Posts.scss';
 
@@ -16,7 +17,13 @@ export const Posts = () => {
 			<h2>Posts</h2>
 			<div className='posts-grid'>
 				{data.map((post) => (
-					<Post key={post.id} post={post} />
+					<article key={post.id} className='posts-article'>
+						<h3>{post.title}</h3>
+						<p>{post.body}</p>
+						<Link to={`/posts/${post.id}`}>
+							<Button>Click</Button>
+						</Link>
+					</article>
 				))}
 			</div>
 		</section>

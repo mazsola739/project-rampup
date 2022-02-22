@@ -1,14 +1,19 @@
 import { UserProps } from './User.types';
 
 import './User.scss';
-import { Button } from '..';
+import { Avatar, Button } from '..';
 
 export const User = ({ user }: UserProps) => {
-	const { username, name, email, phone, website } = user;
+	const { id, username, name, email, phone, website } = user;
+
+	//TODO: albums comments posts todos
 
 	return (
 		<article className='user-article'>
-			<h3>{username}</h3>
+			<h3>
+				<Avatar id={id} />
+				{username}
+			</h3>
 			<table>
 				<thead>
 					<tr>
@@ -31,7 +36,7 @@ export const User = ({ user }: UserProps) => {
 					</tr>
 				</tbody>
 			</table>
-			<Button>More info</Button>
+			<Button>Click</Button>
 		</article>
 	);
 };

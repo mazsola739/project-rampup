@@ -1,16 +1,30 @@
-import { PostProps } from './Post.types';
+import { useQuery } from 'react-query';
+import { useParams, Link } from 'react-router-dom';
+import { getPostsById } from '../../api';
 import { Button } from '..';
 
 import './Post.scss';
 
-export const Post = ({ post }: PostProps) => {
-	const { body, title } = post;
+export const Post = () => {
+	const { id = '' } = useParams();
+	const { isLoading, data } = useQuery({
+		queryKey: ['posts', id],
+		queryFn: () => getPostsById(id),
+	});
+
+	if (isLoading) return <p>Loading</p>;
+
+	if (!data) return null;
+
+	//TODO: username, comments
 
 	return (
 		<article className='post-article'>
-			<h3>{title}</h3>
-			<p>{body}</p>
-			<Button>More info</Button>
+			<h3>{data.title}</h3>
+			<p>{data.body}</p>
+			<Link to='/posts'>
+				<Button>Click</Button>
+			</Link>
 		</article>
 	);
 };

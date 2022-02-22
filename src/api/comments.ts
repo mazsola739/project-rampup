@@ -10,3 +10,13 @@ export const getComments = async () => {
 
 	return data;
 };
+
+export const getCommentsById = async (id: string) => {
+	const commentApi = instance();
+
+	const response = await commentApi(`posts/${id}/comments`);
+
+	const data: CommentProp = response.data;
+
+	return data;
+};

@@ -1,12 +1,6 @@
 .todo-article {
-  border: 1px solid var(--black-panther);
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+  border: 0.5px solid var(--steel);
   padding: 10px;
 }
 
-.todo-article:nth-child(odd) {
-  background: var(--baby-seal);
-}
-
-.todo-article:nth-child(even) {
-  background: var(--dust-to-dust);
-}
