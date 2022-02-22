@@ -10,3 +10,13 @@ export const getTodos = async () => {
 
 	return data;
 };
+
+export const getTodosById = async (id: string) => {
+	const postApi = instance();
+
+	const response = await postApi(`users/${id}/albums`);
+
+	const data: TodoProp = response.data;
+
+	return data;
+};
