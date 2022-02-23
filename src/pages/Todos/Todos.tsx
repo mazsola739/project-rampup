@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query';
 import { getTodos } from 'src/api';
-import { Todo } from '../../components/Todo';
+import { Todo } from 'src/components';
 
 export const Todos = () => {
 	const { isLoading, data } = useQuery('todos', getTodos);
