@@ -1,4 +1,11 @@
 .users-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  overflow-y: scroll;
+
+  height: 100%;
   padding: 10px;
 }
 

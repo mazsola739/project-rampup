@@ -11,7 +11,7 @@ export const getPhotos = async () => {
 	return data;
 };
 
-export const getPhotosById = async (id: string) => {
+export const getPhotoById = async (id: string) => {
 	const commentApi = instance();
 
 	const response = await commentApi(`albums/${id}/photos`);

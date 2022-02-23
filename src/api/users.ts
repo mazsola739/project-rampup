@@ -10,3 +10,13 @@ export const getUsers = async () => {
 
 	return data;
 };
+
+export const getUserById = async (id: string) => {
+	const postApi = instance();
+
+	const response = await postApi(`users/${id}`);
+
+	const data: UserProp = response.data;
+
+	return data;
+};

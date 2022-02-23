@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query';
 import { useParams, Link } from 'react-router-dom';
-import { getPostsById } from '../../api';
+import { getPostById } from '../../api';
 import { Button } from '..';
 
 import './Post.scss';
@@ -9,7 +9,7 @@ export const Post = () => {
 	const { id = '' } = useParams();
 	const { isLoading, data } = useQuery({
 		queryKey: ['posts', id],
-		queryFn: () => getPostsById(id),
+		queryFn: () => getPostById(id),
 	});
 
 	if (isLoading) return <p>Loading</p>;

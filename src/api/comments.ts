@@ -11,7 +11,7 @@ export const getComments = async () => {
 	return data;
 };
 
-export const getCommentsById = async (id: string) => {
+export const getCommentById = async (id: string) => {
 	const commentApi = instance();
 
 	const response = await commentApi(`posts/${id}/comments`);
