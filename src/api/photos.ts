@@ -1,12 +1,14 @@
 import { PhotoProp } from 'src/types';
-import { instance } from '.';
+import { api } from '.';
 
 export const getPhotos = async () => {
-	const photoApi = instance();
+	const { data } = await api.get<PhotoProp[]>('photos');
 
-	const response = await photoApi('photos');
+	return data;
+};
 
-	const data: PhotoProp[] = response.data;
+export const getPhotosById = async (id: string) => {
+	const { data } = await api.get<PhotoProp>(`albums/${id}/photos`);
 
 	return data;
 };

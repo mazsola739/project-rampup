@@ -1,12 +1,14 @@
 import { PostProp } from 'src/types';
-import { instance } from '.';
+import { api } from '.';
 
 export const getPosts = async () => {
-	const postApi = instance();
+	const { data } = await api.get<PostProp[]>('posts');
 
-	const response = await postApi('posts');
+	return data;
+};
 
-	const data: PostProp[] = response.data;
+export const getPostsById = async (id: string) => {
+	const { data } = await api.get<PostProp>(`posts/${id}`);
 
 	return data;
 };

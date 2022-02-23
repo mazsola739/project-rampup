@@ -1,12 +1,14 @@
 import { AlbumProp } from 'src/types';
-import { instance } from '.';
+import { api } from '.';
 
 export const getAlbums = async () => {
-	const albumApi = instance();
+	const { data } = await api.get<AlbumProp[]>('albums');
 
-	const response = await albumApi.get('albums');
+	return data;
+};
 
-	const data: AlbumProp[] = response.data;
+export const getAlbumsById = async (id: string) => {
+	const { data } = await api.get<AlbumProp>(`users/${id}/albums`);
 
 	return data;
 };

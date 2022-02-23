@@ -1,12 +1,14 @@
 import { CommentProp } from 'src/types';
-import { instance } from '.';
+import { api } from '.';
 
 export const getComments = async () => {
-	const commentApi = instance();
+	const { data } = await api.get<CommentProp[]>('comments');
 
-	const response = await commentApi('comments');
+	return data;
+};
 
-	const data: CommentProp[] = response.data;
+export const getCommentsById = async (id: string) => {
+	const { data } = await api.get<CommentProp>(`posts/${id}/comments`);
 
 	return data;
 };

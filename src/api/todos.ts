@@ -1,12 +1,14 @@
 import { TodoProp } from 'src/types';
-import { instance } from '.';
+import { api } from '.';
 
 export const getTodos = async () => {
-	const todoApi = instance();
+	const { data } = await api.get<TodoProp[]>('todos');
 
-	const response = await todoApi('todos');
+	return data;
+};
 
-	const data: TodoProp[] = response.data;
+export const getTodosById = async (id: string) => {
+	const { data } = await api.get<TodoProp>(`users/${id}/albums`);
 
 	return data;
 };
