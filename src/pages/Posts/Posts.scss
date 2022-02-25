@@ -1,25 +1,38 @@
-.posts-section {
-  display: flex;
-  flex-direction: column;
+.posts-container {
+  display: grid;
+  grid-template-columns: 75% auto;
   gap: 10px;
 
-  overflow-y: scroll;
-
   height: 100%;
-  padding: 10px;
+  width: 100%;
+  padding: 10px 0 10px 10px;
+}
+
+.posts-container section,
+.posts-container aside {
+  overflow: auto;
 }
 
 .posts-grid {
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: grid;
+  grid-template-columns: 49% 49%;
   gap: 10px;
 }
 
-.posts-article {
-  position: relative;
-
-  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
-  border: 0.5px solid var(--steel);
-  height: 180px;
+.posts-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: stretch;
   padding: 10px;
+  border: 0.5px solid var(--steel);
+  height: auto;
+  text-align: justify;
+}
+
+.posts-button {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+  margin-top: 20px;
 }

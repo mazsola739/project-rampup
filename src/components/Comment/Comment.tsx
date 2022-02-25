@@ -1,13 +1,15 @@
 import { CommentProps } from './Comment.types';
-
 import './Comment.scss';
 
 export const Comment = ({ comment }: CommentProps) => {
-	const { body } = comment;
+	const { name, email, body } = comment;
 
 	return (
-		<article className='comment-article'>
+		<div className='comment-container'>
+			<h4>
+				by: {name} email: {email}
+			</h4>
 			<p>{body}</p>
-		</article>
+		</div>
 	);
 };

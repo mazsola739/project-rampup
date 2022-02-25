@@ -1,5 +1,5 @@
-import { Header, Navigation, Main, Footer } from '..';
-
+import { Outlet } from 'react-router-dom';
+import { Header, Navigation, Footer } from '..';
 import './MainLayout.scss';
 
 export const MainLayout = () => {
@@ -7,7 +7,9 @@ export const MainLayout = () => {
 		<div className='layout'>
 			<Header />
 			<Navigation />
-			<Main />
+			<main>
+				<Outlet />
+			</main>
 			<Footer />
 		</div>
 	);

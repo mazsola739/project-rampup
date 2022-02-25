@@ -8,17 +8,13 @@ export const getTodos = async () => {
 };
 
 export const getTodosById = async (id: string) => {
-	const { data } = await api.get<TodoProp>(`users/${id}/albums`);
+	const { data } = await api.get<TodoProp>(`todos/${id}`);
 
 	return data;
 };
 
-export const getTodoById = async (id: string) => {
-	const postApi = instance();
-
-	const response = await postApi(`users/${id}/albums`);
-
-	const data: TodoProp = response.data;
+export const getTodosByUserId = async (id: string) => {
+	const { data } = await api.get<TodoProp[]>(`users/${id}/todos`);
 
 	return data;
 };

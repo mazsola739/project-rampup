@@ -8,17 +8,13 @@ export const getAlbums = async () => {
 };
 
 export const getAlbumsById = async (id: string) => {
-	const { data } = await api.get<AlbumProp>(`users/${id}/albums`);
+	const { data } = await api.get<AlbumProp>(`albums/${id}`);
 
 	return data;
 };
 
-export const getAlbumById = async (id: string) => {
-	const postApi = instance();
-
-	const response = await postApi(`users/${id}/albums`);
-
-	const data: AlbumProp = response.data;
+export const getAlbumsByUserId = async (id: string) => {
+	const { data } = await api.get<AlbumProp>(`users/${id}/albums`);
 
 	return data;
 };

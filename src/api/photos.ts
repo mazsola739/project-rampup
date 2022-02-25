@@ -8,17 +8,13 @@ export const getPhotos = async () => {
 };
 
 export const getPhotosById = async (id: string) => {
-	const { data } = await api.get<PhotoProp>(`albums/${id}/photos`);
+	const { data } = await api.get<PhotoProp>(`photos/${id}`);
 
 	return data;
 };
 
-export const getPhotoById = async (id: string) => {
-	const commentApi = instance();
-
-	const response = await commentApi(`albums/${id}/photos`);
-
-	const data: PhotoProp = response.data;
+export const getPhotosByAlbumId = async (id: string) => {
+	const { data } = await api.get<PhotoProp[]>(`albums/${id}/photos`);
 
 	return data;
 };

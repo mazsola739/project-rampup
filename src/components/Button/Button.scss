@@ -1,16 +1,13 @@
 button {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-
   display: inline-block;  
   
   background: var(--steel);
   cursor: pointer;
 
-  margin: 10px;
   border: 1px solid var(--black-panther);
   border-radius: 5px;
+  width: 80px;
+  height: 30px;
 
   text-decoration: none;
   color: var(--dust-to-dust);

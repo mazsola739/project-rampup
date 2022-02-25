@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query';
+import { Link } from 'react-router-dom';
 import { getAlbums } from 'src/api';
-import { Album } from 'src/components';
-
+import { UserName, Button, Photos } from 'src/components';
 import './Albums.scss';
 
 export const Albums = () => {
@@ -12,13 +12,26 @@ export const Albums = () => {
 	if (!data) return null;
 
 	return (
-		<section className='albums-section'>
-			<h2>Albums</h2>
-			<div className='albums-grid'>
-				{data.map((album) => (
-					<Album key={album.id} album={album} />
-				))}
-			</div>
-		</section>
+		<div className='albums-container'>
+			<section>
+				<h2>Albums</h2>
+				<div className='albums-grid'>
+					{data.map((album) => (
+						<div key={album.id} className='albums-card'>
+							<h3>{album.title}</h3>
+							<UserName id={album.userId} />
+							<div className='albums-button'>
+								<Link to={`/albums/${album.id}`}>
+									<Button>Click</Button>
+								</Link>
+							</div>
+						</div>
+					))}
+				</div>
+			</section>
+			<aside>
+				<Photos />
+			</aside>
+		</div>
 	);
 };

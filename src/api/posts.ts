@@ -13,12 +13,8 @@ export const getPostsById = async (id: string) => {
 	return data;
 };
 
-export const getPostById = async (id: string) => {
-	const postApi = instance();
-
-	const response = await postApi(`posts/${id}`);
-
-	const data: PostProp = response.data;
+export const getPostsByUserId = async (id: string) => {
+	const { data } = await api.get<PostProp>(`users/${id}/posts`);
 
 	return data;
 };

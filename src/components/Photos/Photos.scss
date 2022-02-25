@@ -1,0 +1,14 @@
+.photos-container {
+  padding: 0 10px 10px 0;
+}
+
+.photos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+
+.photos-card {
+  width: 66px;
+  height: 66px;
+}

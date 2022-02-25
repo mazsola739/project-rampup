@@ -1,16 +1,37 @@
-.users-section {
-  display: flex;
-  flex-direction: column;
+.users-container {
+  display: grid;
+  grid-template-columns: 75% auto;
   gap: 10px;
-
-  overflow-y: scroll;
 
   height: 100%;
   padding: 10px;
 }
 
+.users-container section,
+.users-container aside {
+  overflow: auto;
+}
+
 .users-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: 49% 49%;
   gap: 10px;
+}
+
+.users-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: stretch;
+  padding: 10px;
+  border: 0.5px solid var(--steel);
+  height: auto;
+  text-align: justify;
+}
+
+.users-button {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+  margin-top: 20px;
 }
