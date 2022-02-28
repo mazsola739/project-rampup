@@ -1,8 +1,10 @@
 import { PhotoProp } from 'src/types';
 import { api } from '.';
 
-export const getPhotos = async () => {
-	const { data } = await api.get<PhotoProp[]>('photos');
+export const getPhotos = async (page: number = 1, limit: number = 28) => {
+	const { data } = await api.get<PhotoProp[]>(
+		`photos/?_page=${page}&_limit=${limit}`
+	);
 
 	return data;
 };

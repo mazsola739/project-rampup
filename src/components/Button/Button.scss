@@ -11,10 +11,11 @@ button {
 
   text-decoration: none;
   color: var(--dust-to-dust);
+  
+  &:hover {
+    background: var(--black-panther);
+  
+    color: var(--silver-lake);
+  }
 }
 
-button:hover {
-  background: var(--black-panther);
-  
-  color: var(--silver-lake);
-}

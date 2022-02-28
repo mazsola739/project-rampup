@@ -1,3 +1,5 @@
-.comment-container {
-  border: 0.5px solid var(--steel);
+.comment {
+  &__container {
+    border: 0.5px solid var(--steel);
+  }
 }

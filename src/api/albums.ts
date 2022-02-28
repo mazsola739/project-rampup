@@ -1,8 +1,10 @@
 import { AlbumProp } from 'src/types';
 import { api } from '.';
 
-export const getAlbums = async () => {
-	const { data } = await api.get<AlbumProp[]>('albums');
+export const getAlbums = async (page: number = 1, limit: number = 6) => {
+	const { data } = await api.get<AlbumProp[]>(
+		`albums/?_page=${page}&_limit=${limit}`
+	);
 
 	return data;
 };

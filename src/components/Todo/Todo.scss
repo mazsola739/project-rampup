@@ -1,5 +1,11 @@
-.todo-article {
-   border: 0.5px solid var(--steel);
-   margin-bottom: 10px;
-   padding: 10px;
+.todo {
+  h2 {
+    margin: 10px 0 0 0;
+  }
+  
+  &__article {
+    border: 0.5px solid var(--steel);
+    padding: 10px;
+    margin: 10px 0 0 0;
+  }
 }

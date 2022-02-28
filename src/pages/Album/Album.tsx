@@ -16,14 +16,14 @@ export const Album = () => {
 	if (!data) return null;
 
 	return (
-		<div className='album-container'>
-			<article className='album-article'>
+		<div className='album__container'>
+			<article className='album__article'>
 				<h2>{data.title}</h2>
 				<Link to={`/users/${data.id}`}>
 					<UserName id={data.userId} />
 				</Link>
 				<AlbumPhotos id={data.id} />
-				<div className='album-button'>
+				<div className='album__button'>
 					<Link to='/albums'>
 						<Button>Back</Button>
 					</Link>

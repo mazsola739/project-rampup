@@ -1,8 +1,10 @@
 import { CommentProp } from 'src/types';
 import { api } from '.';
 
-export const getComments = async () => {
-	const { data } = await api.get<CommentProp[]>('comments');
+export const getComments = async (page: number = 1, limit: number = 4) => {
+	const { data } = await api.get<CommentProp[]>(
+		`comments/?_page=${page}&_limit=${limit}`
+	);
 
 	return data;
 };

@@ -1,8 +1,10 @@
 import { PostProp } from 'src/types';
 import { api } from '.';
 
-export const getPosts = async () => {
-	const { data } = await api.get<PostProp[]>('posts');
+export const getPosts = async (page: number = 1, limit: number = 6) => {
+	const { data } = await api.get<PostProp[]>(
+		`posts/?_page=${page}&_limit=${limit}`
+	);
 
 	return data;
 };

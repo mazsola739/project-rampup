@@ -15,15 +15,17 @@ export const AlbumPhotos = ({ id }: AlbumPhotosProps) => {
 	if (!data) return null;
 
 	return (
-		<div className='albumPhotos-container'>
+		<div className='albumPhotos__container'>
 			{data.map((photo) => (
-				<Link to={`/photos/${photo.id}`}>
-					<img
-						src={photo.thumbnailUrl}
-						alt={photo.title}
-						className='albumPhoto-image'
-					/>
-				</Link>
+				<div key={photo.id}>
+					<Link to={`/photos/${photo.id}`}>
+						<img
+							src={photo.thumbnailUrl}
+							alt={photo.title}
+							className='albumPhotos__image'
+						/>
+					</Link>
+				</div>
 			))}
 		</div>
 	);

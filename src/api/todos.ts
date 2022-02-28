@@ -1,8 +1,10 @@
 import { TodoProp } from 'src/types';
 import { api } from '.';
 
-export const getTodos = async () => {
-	const { data } = await api.get<TodoProp[]>('todos');
+export const getTodos = async (page: number = 1, limit: number = 4) => {
+	const { data } = await api.get<TodoProp[]>(
+		`todos/?_page=${page}&_limit=${limit}`
+	);
 
 	return data;
 };

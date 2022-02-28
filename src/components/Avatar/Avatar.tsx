@@ -7,7 +7,7 @@ export const Avatar = ({ id }: AvatarProps) => {
 
 	return (
 		<img
-			className='avatar-image'
+			className='avatar__image'
 			src={userAvatar[+`${id}` - 1]}
 			alt={`${id}`}
 		/>

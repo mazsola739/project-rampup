@@ -25,7 +25,7 @@ export const Post = () => {
  */
 
 	return (
-		<article className='post-article'>
+		<article className='post__article'>
 			<h3>{data.title}</h3>
 			<p>{data.body}</p>
 			<Link to='/posts'>

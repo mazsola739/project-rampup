@@ -16,7 +16,7 @@ export const Photo = () => {
 	if (!data) return null;
 
 	return (
-		<article className='photo-article'>
+		<article className='photo__article'>
 			<h2>{data.title}</h2>
 			<img src={data.thumbnailUrl} alt={data.title} />
 			<img src={data.url} alt={data.title} />

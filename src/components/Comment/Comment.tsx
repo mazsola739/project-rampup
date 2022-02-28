@@ -5,7 +5,7 @@ export const Comment = ({ comment }: CommentProps) => {
 	const { name, email, body } = comment;
 
 	return (
-		<div className='comment-container'>
+		<div className='comment__container'>
 			<h4>
 				by: {name} email: {email}
 			</h4>
