@@ -5,7 +5,7 @@ import './Photos.scss';
 
 export const Photos = () => {
 	const [page, setPage] = useState(1);
-	const [limit] = useState(28);
+	const [limit] = useState(32);
 
 	const { isLoading, data, isFetching, isPreviousData } = useQuery(
 		['photos', page],

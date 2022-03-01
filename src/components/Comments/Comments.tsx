@@ -6,9 +6,9 @@ import './Comments.scss';
 
 export const Comments = () => {
 	const [page, setPage] = useState(1);
-	const [limit] = useState(4);
+	const [limit] = useState(5);
 
-	const { isLoading, data, isFetching, isPreviousData } = useQuery(
+	const { isLoading, data, isPreviousData } = useQuery(
 		['comments', page],
 		() => getComments(page, limit),
 		{
@@ -30,21 +30,22 @@ export const Comments = () => {
 							<p>{comment.body}</p>
 						</div>
 					))}
-					<button
-						onClick={() => setPage((old) => Math.max(old - 1, 0))}
-						disabled={page === 0}>
-						Previous
-					</button>
-					<button
-						onClick={() => {
-							if (!isPreviousData) {
-								setPage((old) => old + 1);
-							}
-						}}
-						disabled={isPreviousData}>
-						Next
-					</button>
-					{isFetching ? <span> Loading...</span> : null}
+					<div>
+						<button
+							onClick={() => setPage((old) => Math.max(old - 1, 0))}
+							disabled={page === 0}>
+							Previous
+						</button>
+						<button
+							onClick={() => {
+								if (!isPreviousData) {
+									setPage((old) => old + 1);
+								}
+							}}
+							disabled={isPreviousData}>
+							Next
+						</button>
+					</div>
 				</>
 			)}
 		</section>

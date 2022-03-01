@@ -9,7 +9,7 @@ export const Albums = () => {
 	const [page, setPage] = useState(1);
 	const [limit] = useState(6);
 
-	const { isLoading, data, isFetching, isPreviousData } = useQuery(
+	const { isLoading, data, isPreviousData } = useQuery(
 		['albums', page],
 		() => getAlbums(page, limit),
 		{
@@ -38,21 +38,22 @@ export const Albums = () => {
 								</div>
 							</div>
 						))}
-						<button
-							onClick={() => setPage((old) => Math.max(old - 1, 0))}
-							disabled={page === 0}>
-							Previous
-						</button>
-						<button
-							onClick={() => {
-								if (!isPreviousData) {
-									setPage((old) => old + 1);
-								}
-							}}
-							disabled={isPreviousData}>
-							Next
-						</button>
-						{isFetching ? <span> Loading...</span> : null}
+						<div>
+							<button
+								onClick={() => setPage((old) => Math.max(old - 1, 0))}
+								disabled={page === 0}>
+								Previous
+							</button>
+							<button
+								onClick={() => {
+									if (!isPreviousData) {
+										setPage((old) => old + 1);
+									}
+								}}
+								disabled={isPreviousData}>
+								Next
+							</button>
+						</div>
 					</div>
 				)}
 			</section>
