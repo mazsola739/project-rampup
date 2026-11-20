@@ -11,7 +11,7 @@ describe('layout', () => {
     expect(router.state.location.pathname).toBe('/posts')
 
     const footer = screen.getByRole('contentinfo')
-    expect(within(footer).getByText(/ramp-up task from my/i)).toHaveTextContent('EPAM')
+    expect(within(footer).getByText(/ramp-up task before my/i)).toHaveTextContent('February 2022')
     expect(within(footer).getByRole('link', { name: /back to my portfolio/i })).toHaveAttribute(
       'href',
       PORTFOLIO_URL,

@@ -3,7 +3,7 @@
   "private": true,
   "version": "2.0.0",
   "type": "module",
-  "description": "My EPAM ramp-up task from 2022 (a JSONPlaceholder browser), modernized with Vite, React 19 and TanStack Query",
+  "description": "My ramp-up task from 2022 (a JSONPlaceholder browser), modernized with Vite, React 19 and TanStack Query",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

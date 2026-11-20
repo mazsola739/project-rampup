@@ -71,7 +71,7 @@ export function Layout() {
       <footer className="bg-bar text-bar-ink">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 py-6 text-center text-sm sm:px-6">
           <p>
-            A ramp-up task from my <strong>EPAM</strong> days: built in February 2022, modernized in
+            A ramp-up task before my first junior project: built in February 2022, modernized in
             2026.
           </p>
           <p className="opacity-80">
