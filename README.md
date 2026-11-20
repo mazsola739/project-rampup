@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Project Ramp-up
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Awesome site**: a small browser for the posts, albums, photos, users and todos of the
+[JSONPlaceholder](https://jsonplaceholder.typicode.com) fake REST API.
 
-## Available Scripts
+**Live:** <https://mazsola739.github.io/project-rampup/> · **Portfolio:** <https://mazsola739.github.io/mazsola739/>
 
-In the project directory, you can run:
+It was my ramp-up task from my EPAM days: in February 2022, before joining my first project as a junior
+developer, I built it with React 17, React Query 3 and Sass in two weeks. In 2026 I rebuilt it with today's
+tools and finished what was left open back then. The commits from 2022 are still here, the original state is
+tagged [`v2022`](../../tree/v2022).
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Posts**: paged cards with the author, a post page with its comments, and the latest comments on the side
+- **Albums**: paged cards with a cover photo, an album page with all its photos, a photo page with previous / next
+- **Users**: cards with the drawn avatars, a profile page with the user's posts, albums and todos
+- The page number is in the address (`#/posts?page=3`), so a page can be shared and the back button works
+- The next page loads while the current one stays on screen; every list has a loading and an error state
+- Light and dark theme, works on phones, keyboard and screen reader friendly
+- 404 page for unknown addresses and for posts, albums, photos or users that do not exist
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### What changed since 2022
 
-### `npm test`
+| 2022                               | 2026                                                                                    |
+| ---------------------------------- | --------------------------------------------------------------------------------------- |
+| Create React App 5, Yarn           | Vite 8, Bun                                                                             |
+| React 17, React Router 6           | React 19, React Router 7 (hash routing for GitHub Pages)                                |
+| React Query 3 + Axios              | TanStack Query 5 + `fetch`, all queries in one place                                    |
+| Sass, BEM class names              | Tailwind CSS 4, the same grey palette, plus a dark theme                                |
+| Google Fonts from Google's servers | Self-hosted fonts (Fontsource), no outside requests for them                            |
+| One skipped test                   | 21 tests with Vitest and Testing Library                                                |
+| `TODO`s, Pagination never wired in | Comments on the post page, posts / albums / todos on the profile, pagination everywhere |
+| —                                  | Biome lint and format, GitHub Actions deploy to GitHub Pages                            |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Stack
 
-### `npm run build`
+React 19 · TypeScript · [TanStack Query 5](https://tanstack.com/query) · [React Router 7](https://reactrouter.com) ·
+[Tailwind CSS 4](https://tailwindcss.com) · [Vite](https://vite.dev) · [Vitest](https://vitest.dev) +
+Testing Library · [Biome](https://biomejs.dev) · [Bun](https://bun.sh)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Run locally
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+bun install
+bun run dev
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Script              | What it does                                          |
+| ------------------- | ----------------------------------------------------- |
+| `bun run dev`       | dev server with hot reload                            |
+| `bun run build`     | type check + production build into `dist/`            |
+| `bun run preview`   | serve the production build locally                    |
+| `bun run test`      | unit and component tests (Vitest, happy-dom)          |
+| `bun run typecheck` | TypeScript check only                                 |
+| `bun run lint`      | Biome: lint, formatting, import order and class order |
+| `bun run format`    | apply every safe Biome fix and format the code        |
 
-### `npm run eject`
+## Project structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+src/
+  api/          fetch client, JSONPlaceholder types, every query of the app (queries.ts)
+  components/   layout, pagination, cards, avatars, theme toggle, small UI pieces
+  pages/        Posts, Post, Albums, Album, Photo, Users, User, NotFound
+  assets/       header photo and the 10 user avatars from 2022
+  test/         test setup and a small fake JSONPlaceholder for the tests
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Deployment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Every push to `main` is linted, type checked, tested, built and published by
+`.github/workflows/deploy.yml`. One-time setup in the repository: **Settings → Pages → Source: GitHub Actions**.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The app reads its data live from JSONPlaceholder (the photos come from [Lorem Picsum](https://picsum.photos)).

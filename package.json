@@ -1,51 +1,43 @@
 {
-	"name": "awesome-site",
-	"version": "0.1.0",
-	"private": true,
-	"dependencies": {
-		"@testing-library/jest-dom": "^5.16.2",
-		"@testing-library/react": "^12.1.2",
-		"@testing-library/user-event": "^13.5.0",
-		"@types/jest": "^27.4.0",
-		"@types/node": "^17.0.18",
-		"@types/react": "^17.0.39",
-		"@types/react-dom": "^17.0.11",
-		"axios": "^0.26.0",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
-		"react-query": "^3.34.15",
-		"react-router-dom": "^6.2.1",
-		"react-scripts": "5.0.0",
-		"sass": "^1.49.8",
-		"typescript": "^4.5.5",
-		"web-vitals": "^2.1.4"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		]
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
-	"devDependencies": {
-		"file-loader": "^6.2.0",
-		"url-loader": "^4.1.1"
-	}
+  "name": "project-rampup",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "My EPAM ramp-up task from 2022 (a JSONPlaceholder browser), modernized with Vite, React 19 and TanStack Query",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -b",
+    "lint": "biome check .",
+    "lint:ci": "biome ci .",
+    "format": "biome check --write ."
+  },
+  "dependencies": {
+    "@fontsource-variable/montserrat": "^5.3.0",
+    "@fontsource/clicker-script": "^5.3.0",
+    "@tanstack/react-query": "^5.108.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router": "^7.18.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.7",
+    "@tailwindcss/vite": "^4.3.5",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.10",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "happy-dom": "^21.0.4",
+    "tailwindcss": "^4.3.5",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  }
 }

@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* Dark mode follows the data-theme attribute that index.html and the ThemeToggle set. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/*
+ * The 2022 palette (eerie black, black panther, steel, baby seal, dust to dust, silver lake),
+ * as semantic tokens, with a dark version of the same greys.
+ */
+:root {
+  --page: #bcbcbc;
+  --surface: #dedede;
+  --card: #ececec;
+  --ink: #1b1b1b;
+  --muted: #424242;
+  --line: #a2a3a7;
+  --bar: #787878;
+  --bar-ink: #f2f2f2;
+  --accent: #1b1b1b;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --page: #121212;
+  --surface: #1b1b1b;
+  --card: #242424;
+  --ink: #dedede;
+  --muted: #a2a3a7;
+  --line: #424242;
+  --bar: #2e2e2e;
+  --bar-ink: #dedede;
+  --accent: #f2f2f2;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Clicker Script", cursive;
+
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-bar: var(--bar);
+  --color-bar-ink: var(--bar-ink);
+  --color-accent: var(--accent);
+}
+
+@layer base {
+  body {
+    @apply bg-page font-sans text-ink antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+}
