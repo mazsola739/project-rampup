@@ -73,3 +73,7 @@ Every push to `main` is linted, type checked, tested, built and published by
 `.github/workflows/deploy.yml`. One-time setup in the repository: **Settings → Pages → Source: GitHub Actions**.
 
 The app reads its data live from JSONPlaceholder (the photos come from [Lorem Picsum](https://picsum.photos)).
+
+## License
+
+[MIT](LICENSE)
