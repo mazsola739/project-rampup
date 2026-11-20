@@ -12,7 +12,7 @@ describe('layout', () => {
 
     const footer = screen.getByRole('contentinfo')
     expect(within(footer).getByText(/ramp-up task before my/i)).toHaveTextContent('February 2022')
-    expect(within(footer).getByRole('link', { name: /back to my portfolio/i })).toHaveAttribute(
+    expect(within(footer).getByRole('link', { name: 'mazsola739' })).toHaveAttribute(
       'href',
       PORTFOLIO_URL,
     )

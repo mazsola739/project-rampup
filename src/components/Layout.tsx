@@ -1,7 +1,7 @@
 import { NavLink, Outlet, ScrollRestoration } from 'react-router'
 import background from '../assets/background.jpg'
 import { PORTFOLIO_URL, REPO_URL } from '../site.ts'
-import { ArrowLeftIcon, GitHubIcon } from './icons.tsx'
+import { GitHubIcon } from './icons.tsx'
 import { ThemeToggle } from './ThemeToggle.tsx'
 
 const sections = [
@@ -54,9 +54,8 @@ export function Layout() {
           <div className="ml-auto flex items-center gap-1">
             <a
               href={PORTFOLIO_URL}
-              className="hidden items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-semibold transition-colors hover:bg-white/15 sm:inline-flex"
+              className="hidden items-center rounded-full border border-current/40 px-3 py-1 text-sm font-semibold transition-colors hover:bg-white/15 sm:inline-flex"
             >
-              <ArrowLeftIcon />
               Portfolio
             </a>
             <ThemeToggle />
@@ -87,8 +86,7 @@ export function Layout() {
           </p>
           <p className="flex gap-5">
             <a href={PORTFOLIO_URL} className={footerLink}>
-              <ArrowLeftIcon />
-              Back to my portfolio
+              mazsola739
             </a>
             <a href={REPO_URL} target="_blank" rel="noreferrer" className={footerLink}>
               <GitHubIcon />
