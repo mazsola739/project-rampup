@@ -76,4 +76,5 @@ The app reads its data live from JSONPlaceholder (the photos come from [Lorem Pi
 
 ## License
 
-[MIT](LICENSE)
+The code is under the [MIT License](LICENSE). The background picture and the user avatars
+(`src/assets/background.jpg`, `src/assets/users/`) were made with AI and are not covered by it.
